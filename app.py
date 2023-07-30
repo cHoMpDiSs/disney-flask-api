@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv() 
 
 DB_HOST = os.environ.get("HOST")
-DB_PORT = os.environ.get("PORT")
+DB_PORT = os.environ.get("DB_PORT")
 DB_USER = os.environ.get("DB_USER")
 DB_PASSWORD = os.environ.get("PASSWORD")
 DB = os.environ.get("DB")
