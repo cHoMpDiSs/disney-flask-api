@@ -1,0 +1,45 @@
+a {
+    color: black;
+    font-size: 25px;
+    padding: 1rem;
+    
+}
+
+.logo-container {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+.anchors {
+    text-align: center;
+}
+
+.logo {
+    width: 55%;
+    height: auto;
+}
+
+.list-container{
+    margin-top: 3rem;
+    padding-left: 1rem;
+    text-align: center;
+}
+
+table, th, td {
+    border: 2.25px solid;
+    padding: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+#data tr:nth-child(even){background-color: #f2f2f2;}
+
+#data tr:hover {background-color: #ddd;}
+
+#data th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #000000;
+  color: white;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Disney Rest Api</title>
+</head>
+<body>
+    <div class="logo-container">
+        <img class="logo" src="static/images/Disney.png"/>
+    </div>
+    <div class="anchors">
+        <a href="http://127.0.0.1:5000/superheros">Superheros</a>
+        <a href="http://127.0.0.1:5000/comics">Comics</a>
+        <a href="http://127.0.0.1:5000/toys">Toys</a> 
+    </div>
+    <div class="list-container">
+        
+        <table id="data">
+            {% for item in items %}
+                {% if item|length == 7 and items|length == 6 %}
+                    {% if loop.first == True %}
+                        <tr>
+                            <th>Type</th>
+                            <th>Series</th>
+                            <th>Ages</th>
+                        </tr>
+                    {% endif %}
+                <tr>
+                     <td>{{item[1]}}</td> 
+                     <td>{{item[2]}}</td>  
+                     <td>{{item[3]}}</td>
+                </tr>
+
+                {% endif%}
+
+
+                {% if item|length == 7 and items|length == 42 %}
+                    {% if loop.first == True %}
+                        <tr>
+                            <th>Title</th>
+                            <th>Issue</th>
+                            <th>Price</th>
+                        <tr>
+                    {% endif %}
+                            <td>{{item[1]}}</td> 
+                            <td>{{item[2]}}</td>  
+                            <td>{{item[3]}}</td>
+                        </tr>
+                    
+
+                {% endif%}
+                    {% if item|length != 7 %}
+                        {% if loop.first == True %}
+                            <tr>
+                                <th>Superhero</th>
+                                <th>Toys</th>
+                                <th>Comics</th>
+                            </tr>
+                        {% endif %}
+                    <tr>
+                         <td>{{item[1]}}</td> 
+                         <td>{{item[2]}}</td>  
+                         <td>{{item[3]}}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        </table>
+       
+    </div>
+   
+
+
+</body>
+</html>
