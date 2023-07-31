@@ -32,7 +32,7 @@ def verify():
     return render_template("google2e3fc2b1174fde28.html")
 
 @app.route("/google2e3fc2b1174fde28.html", methods=['GET'])
-def verify():
+def verify2():
     return render_template("google2e3fc2b1174fde28.html")
 
 @app.route('/comics', methods=['GET'])
