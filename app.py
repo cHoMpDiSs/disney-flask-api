@@ -27,6 +27,10 @@ conn = psycopg2.connect(host=DB_HOST,
 def index():
     return render_template("index.html")
 
+@app.route("/comics/google2e3fc2b1174fde28.html", methods=['GET'])
+def verify():
+    return render_template("google2e3fc2b1174fde28.html")
+
 @app.route('/comics', methods=['GET'])
 def comic_get():
     # Open a cursor to perform database operations
