@@ -31,6 +31,10 @@ def index():
 def verify():
     return render_template("google2e3fc2b1174fde28.html")
 
+@app.route("/google2e3fc2b1174fde28.html", methods=['GET'])
+def verify():
+    return render_template("google2e3fc2b1174fde28.html")
+
 @app.route('/comics', methods=['GET'])
 def comic_get():
     # Open a cursor to perform database operations
