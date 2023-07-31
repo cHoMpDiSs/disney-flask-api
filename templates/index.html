@@ -22,12 +22,16 @@
                 {% if item|length == 7 and items|length == 6 %}
                     {% if loop.first == True %}
                         <tr>
+                            <th>Toy ID</th>
+                            <th>Superhero ID</th>
                             <th>Type</th>
                             <th>Series</th>
                             <th>Ages</th>
                         </tr>
                     {% endif %}
                 <tr>
+                    <td>{{item[4]}}</td>
+                     <td>{{item[0]}}</td>
                      <td>{{item[1]}}</td> 
                      <td>{{item[2]}}</td>  
                      <td>{{item[3]}}</td>
@@ -39,14 +43,19 @@
                 {% if item|length == 7 and items|length == 42 %}
                     {% if loop.first == True %}
                         <tr>
-                            <th>Title</th>
-                            <th>Issue</th>
+                            <th>Comic ID</th>
+                            <th>Superhero ID</th>
+                            <th style="text-align: center;">Title</th>
+                            <th>Issue#</th>
                             <th>Price</th>
                         <tr>
                     {% endif %}
+                            <td>{{item[0]}}</td>
+                            <td>{{item[5]}}</td>
                             <td>{{item[1]}}</td> 
                             <td>{{item[2]}}</td>  
                             <td>{{item[3]}}</td>
+                            
                         </tr>
                     
 
@@ -54,12 +63,14 @@
                     {% if item|length != 7 %}
                         {% if loop.first == True %}
                             <tr>
+                                <th>Superhero ID</th>
                                 <th>Superhero</th>
                                 <th>Toys</th>
                                 <th>Comics</th>
                             </tr>
                         {% endif %}
                     <tr>
+                        <td>{{item[0]}}</td>
                          <td>{{item[1]}}</td> 
                          <td>{{item[2]}}</td>  
                          <td>{{item[3]}}</td>
